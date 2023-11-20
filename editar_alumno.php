@@ -19,9 +19,12 @@
 
                 if ($result->num_rows > 0) {
                     $alumno = $result->fetch_assoc();
+
+
+
         ?>
                     <h2>Editar Alumno</h2>
-                    <form method="post" action="procesar_editar.php">
+                    <form method="post" action="procesar_editar.php" onsubmit="return confirm('¿Estás seguro de guardar los cambios?')">
                         <input type="hidden" name="id" value="<?php echo $alumno['id']; ?>">
                         <label for="nombre">Nombre:</label>
                         <input type="text" name="nombre" value="<?php echo $alumno['nombre']; ?>" required><br>

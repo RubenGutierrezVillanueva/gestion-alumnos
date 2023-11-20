@@ -1,27 +1,26 @@
 <?php
-require_once 'config.php';
+include("config.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $student_id = $_POST['student_id'];
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+    $alumno_id = $_GET['id'];
 
-    // Realiza la eliminación del estudiante en la base de datos
-    $sql = "DELETE FROM students WHERE id = ?";
-    
-    // Utiliza una sentencia preparada para evitar SQL injection
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $student_id);
-    
-    if ($stmt->execute()) {
-        echo "Registro eliminado correctamente.";
+    $sql = "DELETE FROM alumnos WHERE id = $alumno_id";
+
+    if ($conn->query($sql) === TRUE) {
+        // Redireccionar a la página principal después de la eliminación
+        header("Location: index.php");
+        exit();
     } else {
-        echo "Error al intentar eliminar el registro.";
+        echo "Error al eliminar el alumno: " . $conn->error;
     }
-
-    $stmt->close();
+} else {
+    echo "ID de alumno no válido";
 }
 
-// Redirecciona de nuevo a la página principal
-header("Location: index.php");
-exit();
+$conn->close();
+
+
+
+
 ?>
 

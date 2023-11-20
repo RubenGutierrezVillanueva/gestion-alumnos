@@ -9,17 +9,19 @@ $result = $conn->query($sql);
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Alumnos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Lista de Alumnos</title>
 </head>
 <body>
 
-<div class="tabla">
+<div>  
 
     <h2>Lista de Alumnos</h2>
     <table border="1">
         <tr>
-            <th>ID</th>
+            <th class="id">ID</th>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Edad</th>
@@ -37,21 +39,17 @@ $result = $conn->query($sql);
                     <td>{$row['apellido']}</td>
                     <td>{$row['edad']}</td>
                     <td>{$row['email']}</td>
-                    <td><a href='editar_alumno.php?id=" . $row['id'] . "'>Editar</a> | <a href='procesar_eliminar.php?id=" . $row['id'] . "'> Eliminar </a></td>;
-
+                    <td><a href='editar_alumno.php?id=" . $row['id'] . "' class='estilo-editar'> <i class='fas fa-edit'></i> </a> | <a href='procesar_eliminar.php?id=" . $row['id'] . "' class='estilo-eliminar' onclick='return confirm(\"¿Estás seguro de eliminar este registro?\")'> <i class='fas fa-trash-alt'></i> </a></td>
                  </tr>";
         }
+
        
        
         ?>
     </table>
+
     <div class="boton">   
         <button onclick="window.location.href='agregar_alumno.php'">Agregar Alumno</button>
-        
-        <form action="procesar_eliminar.php" method="post">
-                <input type="hidden" name="student_id" value="<?php echo $student['id']; ?>">
-                <button type="submit" onclick="return confirm('¿Estás seguro de eliminar este registro?')">Eliminar</button>
-        </form>
         
     </div>
 

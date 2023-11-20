@@ -9,6 +9,6 @@ CREATE TABLE  alumnos (
     email VARCHAR(100)
 );
 INSERT INTO alumnos (nombre, apellido, edad, email) VALUES
-    ('Ana', 'López', 23, 'ana.lopez@example.com'),
-    ('Carlos', 'Martínez', 24, 'carlos.martinez@example.com'),
-    ('Laura', 'García', 22, 'laura.garcia@example.com');
+    ('Ana', 'Lopez', 23, 'ana.lopez@example.com');
+    ('Carlos', 'Martinez', 24, 'carlos.martinez@example.com');
+    ('Laura', 'Garcia', 22, 'laura.garcia@example.com');

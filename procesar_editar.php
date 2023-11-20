@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $edad = $_POST["edad"];
     $email = $_POST["email"];
 
-    // Validar y sanitizar los datos según sea necesario
+    // Valida los datos
 
     $sql = "UPDATE alumnos SET nombre='$nombre', apellido='$apellido', edad=$edad, email='$email' WHERE id=$alumno_id";
 

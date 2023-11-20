@@ -1,3 +1,4 @@
+
 <?php
 include("config.php");
 
@@ -7,8 +8,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $edad = $_POST["edad"];
     $email = $_POST["email"];
 
+
+    
+    // Valida los datos
+
+ 
     $sql = "INSERT INTO alumnos (nombre, apellido, edad, email) VALUES ('$nombre', '$apellido', $edad, '$email')";
-    $conn->query($sql);
+    
+    if ($conn->query($sql) === TRUE) {
+        echo "Alumno agregado correctamente";
+    } else {
+        echo "Error al agregar el alumno: " . $conn->error;
+    }
+
+    $conn->close();
+
 }
 ?>
 
@@ -17,10 +31,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Agregar Alumno</title>
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
+
+   <div> 
     <h2>Agregar Alumno</h2>
-    <form method="post" action="procesar_agregar.php">
+   
+    <form method="post" action="procesar_agregar.php"   onsubmit="return confirm('¿Estás seguro de guardar los cambios?')">
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" required><br>
 
@@ -32,9 +51,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <label for="email">Email:</label>
         <input type="email" name="email" required><br>
-
-        <input type="submit" value="Agregar Alumno">
+        
+        <input type="submit" value="Agregar Alumno" >
+        
+        <div class="anterior">
+        <button  onclick="atras()">Anterior</button>
+        </div>
+        
     </form>
-    
+    </div>
+    <div>
+    </div>
+
+    <script>
+        function atras() {
+            window.location.href = 'index.php';
+        }
+    </script>
+   
 </body>
 </html>

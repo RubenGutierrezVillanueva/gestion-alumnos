@@ -54,14 +54,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         <input type="submit" value="Agregar Alumno" >
         
+        
+        
+    </form>
         <div class="anterior">
         <button  onclick="atras()">Anterior</button>
         </div>
-        
-    </form>
     </div>
-    <div>
-    </div>
+    
 
     <script>
         function atras() {

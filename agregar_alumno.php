@@ -36,38 +36,72 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-   <div> 
-    <h2>Agregar Alumno</h2>
-   
-    <form method="post" action="procesar_agregar.php"   onsubmit="return confirm('¿Estás seguro de guardar los cambios?')">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" required><br>
+<div class="contenedor">
+    <header> 
+            <img src="logo.jpg" alt="Logotipo de Mi Sitio Web"  class="logo"> 
+            <h1 class="header-h1"> Conviértete en el profesional que siempre soñaste:</h1>
+            <h1 class="header-h1"> ¡La USMP te ayudará a lograrlo!</h1>
+    </header>
 
-        <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" required><br>
 
-        <label for="edad">Edad:</label>
-        <input type="number" name="edad" required><br>
+   <div class="agregar-alumno"> 
+        <h2>Agregar Alumno</h2>
+    
+        <form method="post" action="procesar_agregar.php"   onsubmit="return confirm('¿Estás seguro de guardar los cambios?')">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required><br>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" required><br>
-        
-        <input type="submit" value="Agregar Alumno" >
-        
-        
-        
-    </form>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" required><br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" required><br>
+            
+            <input type="submit" value="Agregar Alumno" >
+            
+            
+            
+        </form>
         <div class="anterior">
-        <button  onclick="atras()">Anterior</button>
+            <button  onclick="atras()">Anterior</button>
         </div>
     </div>
     
 
+    
+   
+   <div >
+            <footer>
+                    <p>
+                    JR. LAS CALANDRIAS N° 151 – 291
+                    <br>
+                    SANTA ANITA, LIMA – PERÚ. 
+                    <br>
+                    TELÉFONO: (511) 317-2130
+                    <br>
+                    
+                    </p>
+                    <p>
+                    JR. LAS CALANDRIAS N° 151 – 291
+                    <br>
+                    SANTA ANITA, LIMA – PERÚ. 
+                    <br>
+                    TELÉFONO: (511) 317-2130
+                    <br>
+                    <a class="linkusmp" href="http://www.usmp.edu.pe" target="_blank">WWW.USMP.EDU.PE</a>
+
+                    </p>
+            </footer>
+    </div>
     <script>
         function atras() {
-            window.location.href = 'index.php';
+        window.location.href = 'index.php';
         }
     </script>
-   
+ </div>  
+ 
 </body>
 </html>

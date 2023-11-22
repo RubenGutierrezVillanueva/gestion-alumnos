@@ -39,9 +39,13 @@ if ($conn->connect_error) {
 
 
 
-<header class="headerbuscando">
-        <h1>Resultados de la Búsqueda</h1>
+    <header class="headerbuscando">
+        <img src="logo.jpg" alt="Logotipo de Mi Sitio Web"  class="logo"> 
+            <h1 class="header-h1"> Conviértete en el profesional que siempre soñaste:</h1>
+            <h1 class="header-h1"> ¡La USMP te ayudará a lograrlo!</h1>
     </header>
+    <h1 class="resultadosbusqueda">Resultados de la Búsqueda</h1>
+
         <?php
     if (isset($_GET['nombre']) && !empty($_GET['nombre'])) {
         $nombre = $_GET['nombre'];

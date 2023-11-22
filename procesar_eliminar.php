@@ -7,7 +7,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $sql = "DELETE FROM alumnos WHERE id = $alumno_id";
 
     if ($conn->query($sql) === TRUE) {
-        // Redireccionar a la página principal después de la eliminación
+        // Redireccionar a la página principal despues de eliminar
         header("Location: index.php");
         exit();
     } else {

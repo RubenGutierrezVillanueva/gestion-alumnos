@@ -8,7 +8,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
     height: 100%;
 
   
@@ -21,13 +21,7 @@ body {
 
 }
 
-/*
-.container {
-    max-width: 800px;
-    margin:  auto;
-    padding: 20px;
-}
-*/
+
 
 h2 {
     color: #5e5f5f;
@@ -72,6 +66,10 @@ button, input[type="submit"] {
 
 }
 
+.boton button {
+    display: inline-block;
+}
+
 a {
     text-decoration: none;
     color: #007bff;
@@ -84,22 +82,27 @@ a:hover {
 }
 
 
-table{
-    
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    border: none;
+
+table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
 }
 
 
 
-th, td{
-    padding: 10px;
-    text-align: center;
-    background-color: white;
-    font-size: 15px;
-}
+th, td {
+
+        padding: 12px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+   
+    th {
+        background-color:  rgb(207,32,32);
+        color: #fff;
+    }
 
 
 
@@ -142,7 +145,10 @@ header{
 
 .lista-alumnos{
     max-width: 800px;
-    margin:  auto;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 
 }
@@ -193,3 +199,78 @@ footer {
 
 
 
+
+
+/* buscar alumno */
+/* En tu archivo CSS o en una etiqueta <style> en tu HTML */
+#formBusqueda {
+    max-width: 300px; /* Ajusta el ancho máximo del formulario según tu preferencia */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+label, input, button {
+    display: block; /* Muestra cada elemento en una línea separada */
+    margin-bottom: 10px; /* Ajusta el espacio entre elementos según tu preferencia */
+}
+
+#nombre {
+    width: 100%; /* El campo de texto ocupa el ancho completo del formulario */
+}
+
+#btnBuscar {
+    padding: 5px 10px; /* Ajusta el padding para cambiar el tamaño del botón */
+    font-size: 12px; /* Ajusta el tamaño de la fuente del botón según tu preferencia */
+    margin: 0 auto; /* Centra el botón horizontalmente */
+}
+
+
+/* Estilos adicionales si es necesario */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.bodybuscar{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+.headerbuscando {
+    background-color: #f0f0f0;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.resultado-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+}
+
+
+
+
+        .volver-btn {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            margin-top: 20px; /* Ajusta según sea necesario */
+        }
+
+        .volver-btn a {
+            text-decoration: none; /* Evitar subrayado al pasar el cursor */
+        }
+        

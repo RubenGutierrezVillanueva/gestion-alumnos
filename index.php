@@ -23,11 +23,22 @@ $result = $conn->query($sql);
             <h1 class="header-h1"> Conviértete en el profesional que siempre soñaste:</h1>
             <h1 class="header-h1"> ¡La USMP te ayudará a lograrlo!</h1>
         </header>
+        
+    <!-- Buscar Alumnos -->
+<form action="buscar_alumnos.php" method="get" id="formBusqueda">
+    <label for="nombre">Buscar Alumno:</label>
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre del Alumno">
+    <button  type="submit" id="btnBuscar">Buscar</button>
+</form>
+
+
+  
+    <!-- Lista de alumnos -->
 
     <div class="lista-alumnos">  
 
         <h2>Lista de Alumnos</h2>
-        <table border="1">
+        <table>
             <tr>
                 <th class="id">ID</th>
                 <th>Nombre</th>

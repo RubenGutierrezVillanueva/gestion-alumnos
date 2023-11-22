@@ -24,7 +24,7 @@
             if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                 $alumno_id = $_GET['id'];
 
-                // Obtener información del alumno
+                // Obtener informacion del alumno
                 $sql = "SELECT * FROM alumnos WHERE id = $alumno_id";
                 $result = $conn->query($sql);
 
@@ -49,6 +49,9 @@
                             <input type="email" name="email" value="<?php echo $alumno['email']; ?>" required><br>
 
                             <input type="submit" value="Guardar Cambios">
+                            <div class="anterior">
+            <button  onclick="atras()">Anterior</button>
+        </div>
                         </form>
                     </div>
         <?php
@@ -61,7 +64,7 @@
 
             $conn->close();
         ?>
-
+        
         <div class="footer">
                         <footer>
                                 <p>
@@ -86,7 +89,7 @@
                         </footer>
         </div>
             
-
+        
 
     </div>
 

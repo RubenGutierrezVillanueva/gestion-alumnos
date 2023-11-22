@@ -11,7 +11,7 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css>
-
+    <link rel="icon" href="https://usmp.edu.pe/wp-content/uploads/2022/07/favicon_USMP.png" type="image/jpg">
     <title>Universidad San Martin de Porres</title>
 
 </head>

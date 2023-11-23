@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://usmp.edu.pe/wp-content/uploads/2022/07/favicon_USMP.png" type="image/jpg">
+
     <title>Resultados de la Búsqueda</title>
     <link rel="stylesheet" href="style.css">
 
@@ -60,7 +62,7 @@ if ($conn->connect_error) {
                 echo "<tr><th>ID</th><th>Nombre</th><th>Apellido</th><th>Edad</th><th>Correo</th></tr>";
 
                 while ($row = $result->fetch_assoc()) {
-                    // Imprimir información del alumno en una fila de la tabla
+                    // Imprimir informacion del alumno en una fila de la tabla
                     echo "<tr>";
                     echo "<td>" . $row["id"] . "</td>";
                     echo "<td>" . $row["nombre"] . "</td>";
@@ -85,14 +87,14 @@ if ($conn->connect_error) {
 <?php
 
 
-// Botón para volver a la vista principal
+// Boton para volver a la vista principal
 echo '<div class="volver-btn">';
 echo '<a href="index.php"><button>Volver a la Vista Principal</button></a>';
 echo '</div>';
 ?>
     </div>
 
-    <!-- Cerrar la conexión a la base de datos -->
+    <!-- Cerrar la conexion a la base de datos -->
     <?php $conn->close(); ?>
 </body>
 

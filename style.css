@@ -141,7 +141,6 @@ header{
  display: flex;
  justify-content: center;
  font-size: 20px;
- margin: 10px 0; /* Agrega margen arriba y abajo para separar los párrafos */
 
 }
 
@@ -206,15 +205,15 @@ footer {
 
 
 /* buscar alumno */
-/* En tu archivo CSS o en una etiqueta <style> en tu HTML */
+
 #formBusqueda {
-    max-width: 300px; /* Ajusta el ancho máximo del formulario según tu preferencia */
+    max-width: 300px; /* Ajusta el ancho maximo del formulario */
     margin: 0 auto; /* Centra el formulario horizontalmente */
 }
 
 label, input, button {
     display: block; /* Muestra cada elemento en una línea separada */
-    margin-bottom: 10px; /* Ajusta el espacio entre elementos según tu preferencia */
+    margin-bottom: 10px; /* Ajusta el espacio entre elementos */
 }
 
 #nombre {
@@ -222,13 +221,13 @@ label, input, button {
 }
 
 #btnBuscar {
-    padding: 5px 10px; /* Ajusta el padding para cambiar el tamaño del botón */
-    font-size: 12px; /* Ajusta el tamaño de la fuente del botón según tu preferencia */
-    margin: 0 auto; /* Centra el botón horizontalmente */
+    padding: 5px 10px; /* Ajusta el padding para cambiar el tamaño del boton */
+    font-size: 12px; /* Ajusta el tamaño de la fuente del boton según tu preferencia */
+    margin: 0 auto; /* Centra el boton horizontalmente */
 }
 
 
-/* Estilos adicionales si es necesario */
+
 form {
     max-width: 600px;
     margin: 20px auto;
@@ -274,7 +273,7 @@ form {
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
-            margin-top: 20px; /* Ajusta según sea necesario */
+            margin-top: 20px; /* Ajusta segun sea necesario */
         }
 
         .volver-btn a {
@@ -287,3 +286,19 @@ form {
             text-align: center;
             color: rgb(156, 20, 20);
         }
+
+
+
+
+
+
+
+
+
+        
+    
+
+  
+  
+
+       

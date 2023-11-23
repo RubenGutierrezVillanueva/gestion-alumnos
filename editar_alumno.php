@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="https://usmp.edu.pe/wp-content/uploads/2022/07/favicon_USMP.png" type="image/jpg">
+
     <title>Editar Alumno</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -34,7 +36,7 @@
                    
                    <div class="editar-alumno">
                     <h2>Editar Alumno</h2>
-                        <form method="post" action="procesar_editar.php" onsubmit="return confirm('¿Estás seguro de regresar a la pagina anterior?')">
+                        <form method="post" action="procesar_editar.php" onsubmit="return confirm('¿Estás seguro de guardar los cambios?')">
                             <input type="hidden" name="id" value="<?php echo $alumno['id']; ?>">
                             <label for="nombre">Nombre:</label>
                             <input type="text" name="nombre" value="<?php echo $alumno['nombre']; ?>" required><br>
